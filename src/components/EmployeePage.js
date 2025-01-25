@@ -15,7 +15,7 @@ const EmployeePage = ({ employee, onBack }) => (
       <p>SMS:</p>
       <p> 617-000-0002</p>
       <p>Email:</p>
-      <p> example@company.com</p>
+      <p> {employee.email}</p>
     </div>
   </div>
 );
