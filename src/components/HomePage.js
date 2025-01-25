@@ -1,21 +1,12 @@
 import React from "react";
-import Header from "./Header";
-import EmployeeList from "./EmployeeList";
-import EmplyListItems from "./EmplyListItems";
 import SearchBar from "./SearchBar";
+import EmployeeList from "./EmployeeList";
 
-function HomePage() {
-  return (
-    <div>
-      <h2> Home Page </h2>
-      <Header />
-      <EmployeeList />
-      <SearchBar />
-      <EmplyListItems />
-      <EmplyListItems />
-      <EmplyListItems />
-    </div>
-  );
-}
+const HomePage = ({ employees, onEmployeeClick }) => (
+  <div className="home-page">
+    <SearchBar />
+    <EmployeeList employees={employees} onEmployeeClick={onEmployeeClick} />
+  </div>
+);
 
 export default HomePage;

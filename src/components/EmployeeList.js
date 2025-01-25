@@ -1,21 +1,16 @@
-const styles = {
-  list: {
-    color: "green",
-    padding: 1,
-    border: "1px solid blue ",
-  },
-  //   div: {
-  //     border: "1px blue solid",
-  //     margin: "200px",
-  //   },
-};
+import React from "react";
+import EmployeeListItem from "./EmployeeListItem";
 
-function EmployeeList() {
-  return (
-    <div style={styles.div}>
-      <h1 style={styles.list}>This is employees list</h1>
-    </div>
-  );
-}
+const EmployeeList = ({ employees, onEmployeeClick }) => (
+  <ul style={{ listStyle: "none", padding: 0 }}>
+    {employees.map((employee) => (
+      <EmployeeListItem
+        key={employee.id}
+        employee={employee}
+        onClick={() => onEmployeeClick(employee)}
+      />
+    ))}
+  </ul>
+);
 
 export default EmployeeList;

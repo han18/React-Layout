@@ -1,22 +1,9 @@
-const styles = {
-  header: {
-    //     backgroundColor: "black",
-    color: "red",
-    padding: 1,
-    border: "1px solid blue ",
-  },
-  //   div: {
-  //     border: "2px blue solid",
-  //     margin: "100px",
-  //   },
-};
+import React from "react";
 
-function Header() {
-  return (
-    <div style={styles.div}>
-      <h1 style={styles.header}>Employee Directory</h1>
-    </div>
-  );
-}
+const Header = ({ title }) => (
+  <header style={{ padding: "10px", backgroundColor: "#f4f4f4" }}>
+    <h1>{title}</h1>
+  </header>
+);
 
 export default Header;
